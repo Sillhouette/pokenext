@@ -10,10 +10,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@pokenext/lib": "workspace:*",
-    "@pokenext/ui": "workspace:*",
     "@apollo/client": "^3.10.8",
     "@apollo/experimental-nextjs-app-support": "^0.11.2",
+    "@auth0/nextjs-auth0": "^3.5.0",
+    "@pokenext/lib": "workspace:*",
+    "@pokenext/ui": "workspace:*",
     "graphql": "^16.9.0",
     "next": "15.0.0-canary.74",
     "react": "19.0.0-rc.0",
