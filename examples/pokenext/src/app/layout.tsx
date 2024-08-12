@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import { Inter, Pixelify_Sans } from "next/font/google";
 
 import { Footer, Header } from "@pokenext/ui";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 
 export const metadata: Metadata = {
   title: "Pokenext",
@@ -33,11 +34,13 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${pixel.variable} antialiased dark:bg-stone-800 dark:text-amber-300`}
     >
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <UserProvider>
+        <body>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </UserProvider>
     </html>
   );
 }
